@@ -286,7 +286,7 @@ int main() {
 	memset(buffer, 0, FILE_IMAGE_LENGTH);
 	length = mysql_read(&mysql, buffer, FILE_IMAGE_LENGTH);//从数据库中读取出图片
 
-	write_image("a.jpg", buffer, length);
+	write_image("a.jpg", buffer, length);//把读出的图片写入到a.jpg
 
 Exit:
 	mysql_close(&mysql);//关闭释放掉mysql
